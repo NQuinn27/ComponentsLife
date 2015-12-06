@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ComponentsLife.Models.ApplicationDbContext db = new ComponentsLife.Models.ApplicationDbContext();
+}
+
+<div class="page-header">
+    <h1>Summary <small>Event Summary</small></h1>
+</div>
+
+<div class="row">
+    <ul class="nav nav-pills nav-justified">
+        <li class="active"><a data-toggle="pill" href="#all">All</a></li>
+        <li><a data-toggle="pill" href="#engine">Engine</a></li>
+        <li><a data-toggle="pill" href="#drivetrain">Drivetrain</a></li>
+        <li><a data-toggle="pill" href="#brakes">Brakes</a></li>
+        <li><a data-toggle="pill" href="#suspension">Suspension</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="all" class="tab-pane fade in active">
+            <h3>All</h3>
+            <p>Summary of all parts.</p>
+            @Html.Partial("AllSummaryPartial", db.Events.ToList())
+        </div>
+        <div id="engine" class="tab-pane fade">
+            <h3>Engine</h3>
+            <p>Engine Summary.</p>
+            @Html.Partial("EngineSummaryPartial", db.Events.ToList())
+        </div>
+        <div id="drivetrain" class="tab-pane fade">
+            <h3>Drivetrain</h3>
+            <p>Drivetrain Summary</p>
+            @Html.Partial("DrivetrainSummaryPartial", db.Events.ToList())
+        </div>
+        <div id="brakes" class="tab-pane fade">
+            <h3>Brakes</h3>
+            <p>Brakes Summary</p>
+            @Html.Partial("BrakesSummaryPartial", db.Events.ToList())
+        </div>
+        <div id="suspension" class="tab-pane fade">
+            <h3>Suspension</h3>
+            <p>Suspension Summary</p>
+            @Html.Partial("SuspensionSummaryPartial", db.Events.ToList())
+        </div>
+    </div>
+</div>

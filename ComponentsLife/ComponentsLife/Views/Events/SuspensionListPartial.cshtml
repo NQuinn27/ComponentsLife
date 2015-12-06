@@ -1,0 +1,10 @@
+﻿@model IEnumerable<ComponentsLife.Models.Suspension>
+
+<select name="suspensionListbox" id="suspensionListBox">
+    @foreach (var item in Model)
+    {
+        <option value="@item.ID">
+            @item.idString
+        </option>
+    }
+</select>

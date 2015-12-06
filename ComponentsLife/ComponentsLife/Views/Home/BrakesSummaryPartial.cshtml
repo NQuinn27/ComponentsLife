@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ComponentsLife.Models.Event>
+<table class="table table-header-rotated">
+    <thead>
+        <tr>
+            <th class="rotate" colspan="1"><div><span>Notes</span></div></th>
+            <!-- Following headers are rotated -->
+            <th class="rotate" colspan="1"><div><span>ID</span></div></th>
+            @foreach (var item in Model)
+            {
+                <th class="rotate" colspan="2"><div><span>@item.name</span></div></th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="120" class="sectionHeader">Brakes</td>
+        </tr>
+        @Html.Partial("BrakesSummaryPartialInner", Model)
+    </tbody>
+</table>

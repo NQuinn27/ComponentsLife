@@ -1,0 +1,10 @@
+﻿@model IEnumerable<ComponentsLife.Models.Engine>
+
+<select name="engineListbox" id="engineListBox">
+    @foreach (var item in Model)
+    {
+        <option value="@item.ID">
+            @item.idString
+        </option>
+    }
+</select>

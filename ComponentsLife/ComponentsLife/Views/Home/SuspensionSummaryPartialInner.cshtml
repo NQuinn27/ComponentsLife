@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ComponentsLife.Models.Event>
+
+@{
+    ComponentsLife.Models.ApplicationDbContext db = new ComponentsLife.Models.ApplicationDbContext();
+    IEnumerable<ComponentsLife.Models.Suspension> suspensions = db.Suspensions.ToList();
+}
+
+@foreach (var sus in suspensions)
+{
+    var cumulative = 0;
+    <tr>
+        <td>@sus.notes</td>
+        <td>@sus.idString</td>
+        @foreach (var item in Model)
+        {
+            if (sus.ID == item.suspensionId)
+            {
+                cumulative += item.kilometers;
+                <td class="alternate">@cumulative/@sus.maxKilometers</td>
+                if (cumulative >= sus.maxKilometers)
+                {
+                    <td class="offCar"></td>
+                }
+                else
+                {
+                    <td class="onCar"></td>
+                }
+            }
+            else
+            {
+                <td></td>
+                <td></td>
+            }
+        }
+    </tr>
+}
