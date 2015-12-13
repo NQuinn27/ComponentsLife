@@ -202,6 +202,14 @@
     <Compile Include="Migrations\201512061845245_remove_ck.Designer.cs">
       <DependentUpon>201512061845245_remove_ck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512131322159_Add_Profile_Image.cs" />
+    <Compile Include="Migrations\201512131322159_Add_Profile_Image.Designer.cs">
+      <DependentUpon>201512131322159_Add_Profile_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512131339567_Add_Date_of-Birth.cs" />
+    <Compile Include="Migrations\201512131339567_Add_Date_of-Birth.Designer.cs">
+      <DependentUpon>201512131339567_Add_Date_of-Birth.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Brakes.cs" />
@@ -223,6 +231,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\ComponentsLife.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -337,6 +346,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201512061845245_remove_ck.resx">
       <DependentUpon>201512061845245_remove_ck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512131322159_Add_Profile_Image.resx">
+      <DependentUpon>201512131322159_Add_Profile_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512131339567_Add_Date_of-Birth.resx">
+      <DependentUpon>201512131339567_Add_Date_of-Birth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
